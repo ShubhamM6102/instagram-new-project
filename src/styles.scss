@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import '../node_modules/ngx-sharebuttons/themes/variables.scss';
+
+@import '../node_modules/ngx-sharebuttons/themes/material.scss';
+
+
+@import '../node_modules/ngx-sharebuttons/themes/modern.scss';
+@import '../node_modules/ngx-sharebuttons/themes/circles.scss';
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-dialog-container {
+    display: block;
+    padding: 24px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 100%;
+    height: 10%;
+    min-height: inherit;
+    max-height: inherit;
+}

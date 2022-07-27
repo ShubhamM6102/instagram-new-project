@@ -1,0 +1,15 @@
+
+    <mat-card-header class="header" *ngFor="let user of users" >
+        <div *ngIf="user.email == loginEmail">
+        <img class="logo"  src="assets\instagram.png">
+        <span class="icons" >
+        <button mat-icon-button class="button" >
+            <mat-icon class="glyphicon" >home</mat-icon> </button>
+        <button mat-icon-button class="button" routerLink="/home">
+                <mat-icon class="glyphicon"  >add_circle</mat-icon> </button>
+                <button mat-icon-button class="button">
+            <mat-icon class="glyphicon" [class.highlighted]="isActive" (click)="onClick()">favorite</mat-icon> </button>
+            <img mat-card-avatar  ngxGravatar  src="{{user.profileImg}}">
+        </span> 
+    </div>
+    </mat-card-header>

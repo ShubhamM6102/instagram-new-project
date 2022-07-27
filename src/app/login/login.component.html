@@ -1,0 +1,70 @@
+
+ <form [formGroup]="loginBoxFormGroup">
+    <mat-card class="example-card" [ngStyle]="{'background-image' : 'url(./assets/insta.png)','height':'340px', 'background-size': '100% 400px'}" >
+      <img  class="imgStyle"
+        src="assets\instagram.png"/>
+      
+      
+            <div class="box">
+    <div class="example-container">
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <!-- <input matInput placeholder="enter your email" [formControl]="email" required> -->
+          <input matInput placeholder="Enter your email" formControlName="email">
+          <mat-error *ngIf="loginBoxFormGroup.get('email')?.invalid">{{getEmailErrorMessage()}}</mat-error>
+          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+    
+    
+        <!-- <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email">
+          <mat-error *ngIf="loginBoxFormGroup.get('email')?.invalid">{{getEmailErrorMessage()}}</mat-error> -->
+    
+        
+      </div>
+    
+    
+    <!-- <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" placeholder="enter your password" [formControl]="password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <div> -->
+          <div class="example-container">
+            <mat-form-field>
+              <mat-label>Enter your password</mat-label>
+              <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginBoxFormGroup.get('password')?.invalid">{{getPasswordErrorMessage()}}</mat-error>
+    
+              <!-- <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error> -->
+            </mat-form-field>
+          </div>
+    
+    
+          <!-- <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="loginBoxFormGroup.get('password')?.invalid">{{getPasswordErrorMessage()}}</mat-error>
+    
+        </mat-form-field> -->
+    
+        <button mat-raised-button (click)="login()" color="primary" class="signup"   [disabled]="!loginBoxFormGroup.valid">Login</button>
+        <!-- <button mat-raised-button color="primary" class="signup">Sign Up</button> -->
+    </div>
+    </mat-card>
+    </form>
+    

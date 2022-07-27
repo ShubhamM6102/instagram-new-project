@@ -1,0 +1,36 @@
+ <p>comments works!</p>
+<!-- <div class="container-fluid"> -->
+    <!-- <div *ngFor="let Review of courses?.reviews"> -->
+    <!-- <div class="row">
+      <div class="col-sm-1 ">
+        <span><img  ngxGravatar  src="assets\amazon.png"></span>
+      </div>
+        <div class="col-sm-11">
+            <span  class="r1">HelloVeru</span>
+            <div>
+                <span >5</span>
+            <span class="material-icons">star</span>
+        </div>
+            <p class="textreview">Good Digital Marketin COach</p>
+            <div class="subscribe">
+                <button  mat-icon-button color="blue" ><mat-icon>thumb_up_off_alt</mat-icon></button>
+                <button mat-icon-button color="warn" ><mat-icon>thumb_down_off_alt</mat-icon></button>
+            </div>
+        </div>
+    </div>  -->
+    <!-- <div *ngFor="let prod of allPost, let i=index" > -->
+        <div *ngFor="let comment of post?.comments, let j=index" >
+    <mat-card class="example-card">
+        <mat-card-header class="header">
+            <img mat-card-avatar  ngxGravatar  src="{{comment.profileImg}}">
+            <mat-card-title class="title">{{comment.name}}</mat-card-title>
+            <!-- <button mat-icon-button  class="dots">
+              <mat-icon class="glyphicon" [class.highlighted]="comment.like" (click)="onClick(j)">favorite</mat-icon> </button> -->
+          </mat-card-header>
+        
+ <mat-card-content>   {{comment.comment}}    </mat-card-content>
+  
+ </mat-card>
+ <mat-divider></mat-divider>
+        </div>
+      

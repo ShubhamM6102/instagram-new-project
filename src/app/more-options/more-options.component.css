@@ -1,0 +1,13 @@
+.more-option{
+    /* padding-bottom: 5px; */
+    border-color: white;
+    /* border-bottom-color: black;
+    border-top-color: black; */
+    width: 210px;
+    height: 55px;
+    color: blueviolet;
+    /* border-width: 50px; */
+}
+.line{
+    border-bottom-color: blue;
+}
